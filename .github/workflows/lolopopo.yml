@@ -1,0 +1,19 @@
+name: lolopopo workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "TEST"
+  deployment:
+    runs-on: ubuntu-latest
+    environment: lolopopo
+    concurrency: lolopopo
+    steps:
+      - run: sleep 20s
+      - run: echo "DEPLOYMENT"
