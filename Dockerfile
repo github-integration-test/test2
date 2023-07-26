@@ -1,5 +1,4 @@
 FROM centos:centos7
-LABEL maintainer="Przemyslaw Ozgo <linux@ozgo.info>"
 
 RUN \
     yum update -y && \
